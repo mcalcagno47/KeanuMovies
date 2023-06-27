@@ -1,7 +1,7 @@
 const router = require('express').Router();
 require('dotenv').config();
 
-const movieRoutes = require('./movie-routes');
+const movieRoutes = require('./movieRoutes');
 
 router.use('/movie', movieRoutes);
 
