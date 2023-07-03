@@ -9,7 +9,7 @@ router.get('/', (req, res) => {
             name: req.body.name,
             year: req.body.year,
             description: req.body.description,
-            used: req.body.used
+            usedMovie: req.body.usedMovie
         });
         res.status(200).json(getMovies);
     } catch(err) {
@@ -20,11 +20,11 @@ router.get('/', (req, res) => {
 router.post('/', async (req, res) => {
     try {
       const postMovie = await Movie.create({
-        movie_id: req.body.movie_id,
+        movie_id: req.body.id,
         name: req.body.name,
         year: req.body.year,
         description: req.body.description,
-        used: req.body.used
+        usedMovie: req.body.usedMovie
       });
       res.status(200).json(postMovie);
     } catch (err) {

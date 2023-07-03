@@ -23,7 +23,7 @@ Movie.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
-        used: {
+        usedMovie: {
             type: DataTypes.BOOLEAN,
             allowNull: false
         }
