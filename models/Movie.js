@@ -22,6 +22,10 @@ Movie.init(
         description: {
             type: DataTypes.STRING,
             allowNull: false,
+        },
+        used: {
+            type: DataTypes.BOOLEAN,
+            allowNull: false
         }
     },
     {

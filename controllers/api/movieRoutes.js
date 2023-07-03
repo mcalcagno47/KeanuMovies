@@ -8,7 +8,8 @@ router.get('/', (req, res) => {
             id: req.body.id,
             name: req.body.name,
             year: req.body.year,
-            description: req.body.description
+            description: req.body.description,
+            used: req.body.used
         });
         res.status(200).json(getMovies);
     } catch(err) {
@@ -23,6 +24,7 @@ router.post('/', async (req, res) => {
         name: req.body.name,
         year: req.body.year,
         description: req.body.description,
+        used: req.body.used
       });
       res.status(200).json(postMovie);
     } catch (err) {
