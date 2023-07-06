@@ -7,15 +7,16 @@ spinBtn.addEventListener("click", () => {
     Clean();
 
     fetch('/api/movieRoutes/')
-        .then(response => response.json())
         .then(data => {
             showMovies(data);
         })
 })
 
+function Clean(){
+    document.getElementById('spinner-list').innerHTML='';
+  } 
+
 function showMovies(data) {
-    
-    document.getElementById('spinner-list').innerHTML=''
     
     data.results.forEach(movie => {
             let { name, year, description, id } = movie;
