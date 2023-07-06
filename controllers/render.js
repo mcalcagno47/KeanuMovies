@@ -16,4 +16,8 @@ router.get('/', async (req, res) => {
     });
 }});
 
+router.get('/spinner', async (req, res) => {
+    res.render('spinner');
+  });
+
 module.exports = router;
